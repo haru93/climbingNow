@@ -4,6 +4,10 @@
 
   <ul class="navbar-nav ml-auto">
 
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('items.books') }}"><i class="fa fa-book mr-1"></i>書籍</a>
+    </li>
+
     @guest
     <li class="nav-item">
       <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a>
@@ -16,15 +20,10 @@
     </li>
     @endguest
       
-    @auth
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('items.books') }}"><i class="fa fa-book mr-1"></i>関連書籍</a>
-    </li>
-    @endauth
 
     @auth
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a>
+      <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿</a>
     </li>
     @endauth
 

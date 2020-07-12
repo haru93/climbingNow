@@ -5,11 +5,13 @@
 @section('content')
   @include('nav')
     <div class="container">
+	<div class="card-deck">
+		@foreach($response as $item)
 		<div class="row">
-			@foreach($response as $item)
-				@include('items.card')
-			@endforeach
+			@include('items.card')
 		</div>
+		@endforeach
+	</div>
     </div>
 @endsection
 

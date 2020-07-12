@@ -18,6 +18,7 @@ class RakutenController extends Controller
         $response = $client->execute('BooksTotalSearch', array(
         'keyword' => 'ボルダリング',
         'booksGenreId' => '001009',
+        'hits' => '3',
         ));
         // レスポンスが正しいかを isOk() で確認
         if ($response->isOk()) {
